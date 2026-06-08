@@ -3,11 +3,12 @@
 
 class BPM {
     public:
-        BPM(float initialBPM = 120.0) : _bpm(initialBPM), _interval(0.0), _precisionMode(false) {};
+        BPM(float initialBPM = 120.0); // : _bpm(initialBPM), _interval(0.0), _precisionMode(false) {};
         void set(float bpm);
         float get();
         float getInterval();
         void setPrecisionMode(bool enabled);
+        bool getPrecisionMode();
         float increment();
         float decrement();
 
@@ -37,6 +38,10 @@ float BPM::getInterval() {
 void BPM::setPrecisionMode(bool enabled) {
     _precisionMode = enabled;
 }
+
+bool BPM::getPrecisionMode() {
+    return _precisionMode;
+}   
 
 float BPM::increment() {
     if (_precisionMode) {
