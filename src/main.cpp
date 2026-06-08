@@ -78,7 +78,7 @@ void handleEncoder() {
     if (activeIndex == 0) {
       bpm.decrement();
     } else {
-      divisions[activeIndex - 1]->;
+      divisions[activeIndex - 1]->decrement();
     }
   }
 } 
