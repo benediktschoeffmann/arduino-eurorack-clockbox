@@ -3,6 +3,7 @@
 #include <Wire.h>
 #include "Buttons.h"
 #include "Division.h"
+#include "BPM.h"
 
 #ifndef _PINS_H
 #define _PINS_H

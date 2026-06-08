@@ -7,6 +7,9 @@ class Division {
         void begin();
         void reset();
         void next();
+        int getPin() { return _pin; }
+        void increment();
+        void decrement();
 
     private:
         int _pin;
@@ -41,4 +44,16 @@ void Division::next() {
         digitalWrite(_pin, HIGH);
     }
 }
+
+void Division::increment() {
+    _steps++;
+    _half = _steps / 2;
+}
+
+void Division::decrement() {
+    if (_steps > 1) {
+        _steps--;
+        _half = _steps / 2;
+    }
+}   
 #endif
